@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>ExamplePlugin</artifactId>
+    <groupId>cho.info</groupId>
+    <artifactId>McDurid</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -20,14 +20,14 @@
             <artifactId>Spout</artifactId>
             <version>1</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/spoutpluginapi.jar</systemPath>
+            <systemPath>${project.basedir}/lib/spoutpluginapi.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>Bukkit</artifactId>
             <version>1.6.4</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/craftbukkit.jar</systemPath>
+            <systemPath>${project.basedir}/lib/craftbukkit.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

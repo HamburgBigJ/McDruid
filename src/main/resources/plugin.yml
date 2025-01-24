@@ -1,5 +1,5 @@
-name: ExamplePlugin
-main: com.example.Main
+name: McDruid
+main: cho.info.McDruid
 version: 1.0.0
 
 # Depend on Spout
