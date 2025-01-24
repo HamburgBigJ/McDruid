@@ -8,7 +8,7 @@ import org.getspout.spoutapi.sound.SoundEffect;
 
 public class MagicWood extends GenericCustomBlock {
     public MagicWood(Plugin plugin) {
-        super(plugin, "magicWood", true, new GenericCubeBlockDesign(plugin, CustomTexture.getItemUrl("blocks/magic_wood"), 16));
+        super(plugin, "magicWood", true, new GenericCubeBlockDesign(plugin, CustomTexture.getTexture("blocks/magic_wood"), 16));
         setHardness(3.0f);
         setName("Magic Wood");
         setStepSound(SoundEffect.STEP_WOOD);

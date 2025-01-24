@@ -8,6 +8,7 @@ import cho.info.items.MagicStar;
 import cho.info.items.staff.IronNatureStaff;
 import cho.info.items.staff.StarForgedNatureStaff;
 import cho.info.items.staff.WoodenNatureStaff;
+import cho.info.ui.ManaBar;
 import cho.info.utli.HttpServer;
 import org.bukkit.Material;
 import org.bukkit.plugin.PluginManager;
@@ -31,6 +32,8 @@ public class McDruid extends JavaPlugin {
     public MagicWood magicWood;
     public MagicAltar magicAltar;
 
+    public ManaBar manaBar;
+
     @Override
     public void onEnable() {
         saveDefaultConfig();
@@ -48,9 +51,11 @@ public class McDruid extends JavaPlugin {
         magicWood = new MagicWood(this);
         magicAltar = new MagicAltar(this);
 
+        // Ui
+        //manaBar = new ManaBar(this);
 
         PluginManager pluginManager = getServer().getPluginManager();
-        pluginManager.registerEvents(new ClientCheck(), this);
+        pluginManager.registerEvents(new ClientCheck(this), this);
 
 
         loadRecepies();

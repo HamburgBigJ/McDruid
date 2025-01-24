@@ -10,7 +10,7 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 public class StarForgedNatureStaff extends GenericCustomItem {
 
     public StarForgedNatureStaff(Plugin plugin) {
-        super(plugin, "starForgedStaff", CustomTexture.getItemUrl("staff/starforged_nature_staff"));
+        super(plugin, "starForgedStaff", CustomTexture.getTexture("staff/starforged_nature_staff"));
         setName("Star Forged Staff");
         setStackable(false);
     }

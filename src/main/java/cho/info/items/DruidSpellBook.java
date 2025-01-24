@@ -9,7 +9,7 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 
 public class DruidSpellBook extends GenericCustomItem {
     public DruidSpellBook(Plugin plugin) {
-        super(plugin, "woodenSpellBook", CustomTexture.getItemUrl("spell/druids_spell_book"));
+        super(plugin, "woodenSpellBook", CustomTexture.getTexture("spell/druids_spell_book"));
         setName("Spell Book");
         setStackable(false);
     }

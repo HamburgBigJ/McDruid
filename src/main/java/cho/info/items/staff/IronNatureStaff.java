@@ -9,7 +9,7 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 
 public class IronNatureStaff extends GenericCustomItem {
     public IronNatureStaff(Plugin plugin) {
-        super(plugin, "ironNatureStaff", CustomTexture.getItemUrl("staff/iron_nature_staff"));
+        super(plugin, "ironNatureStaff", CustomTexture.getTexture("staff/iron_nature_staff"));
         setName("Iron Nature Staff");
         setStackable(false);
     }

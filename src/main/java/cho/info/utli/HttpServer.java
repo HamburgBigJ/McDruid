@@ -39,14 +39,14 @@ public class HttpServer {
         public void handle(HttpExchange exchange) throws IOException {
             String requestedPath = exchange.getRequestURI().getPath().replace("/assets", "");
 
-            if (requestedPath.endsWith(".png") || requestedPath.endsWith(".waw")) {
+            if (requestedPath.endsWith(".png") || requestedPath.endsWith(".odg")) {
                 InputStream assetStream = getClass().getClassLoader().getResourceAsStream("assets" + requestedPath);
 
                 if (assetStream != null) {
                     String contentType = "application/octet-stream";
                     if (requestedPath.endsWith(".png")) {
                         contentType = "image/png";
-                    } else if (requestedPath.endsWith(".waw")) {
+                    } else if (requestedPath.endsWith(".odg")) {
                         contentType = "audio";
                     }
 

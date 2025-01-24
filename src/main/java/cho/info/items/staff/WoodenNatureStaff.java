@@ -9,7 +9,7 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 
 public class WoodenNatureStaff extends GenericCustomItem {
     public WoodenNatureStaff(Plugin plugin) {
-        super(plugin, "woodenNatureStaff", CustomTexture.getItemUrl("staff/wooden_nature_staff"));
+        super(plugin, "woodenNatureStaff", CustomTexture.getTexture("staff/wooden_nature_staff"));
         setName("Wooden Nature Staff");
         setStackable(false);
     }
