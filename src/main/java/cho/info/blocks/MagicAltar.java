@@ -1,5 +1,6 @@
 package cho.info.blocks;
 
+import cho.info.blocks.design.AltarBlockDesigne;
 import cho.info.utli.CustomTexture;
 import org.bukkit.World;
 import org.bukkit.plugin.Plugin;
@@ -9,8 +10,10 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 import org.getspout.spoutapi.sound.SoundEffect;
 
 public class MagicAltar extends GenericCustomBlock {
+
+
     public MagicAltar(Plugin plugin) {
-        super(plugin, "magicAltar", true, new GenericCubeBlockDesign(plugin, CustomTexture.getTexture("blocks/magic_altar"), 16));
+        super(plugin, "magicAltar", true, new AltarBlockDesigne(plugin, CustomTexture.getTexture("debug_texture")));
         setName("Magic Altar");
         setLightLevel(10);
         setHardness(4.0f);
@@ -26,4 +29,6 @@ public class MagicAltar extends GenericCustomBlock {
 
         return true;
     }
+
+
 }

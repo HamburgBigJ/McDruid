@@ -22,6 +22,7 @@ import org.getspout.spoutapi.material.MaterialData;
 public class McDruid extends JavaPlugin {
 
     private static McDruid instance;
+    private static HttpServer server;
 
     public DruidSpellBook druidSpellBook;
     public WoodenNatureStaff woodenNatureStaff;
@@ -37,8 +38,9 @@ public class McDruid extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        HttpServer httpServer = new HttpServer();
-        httpServer.startHttpServer();
+
+        server = new HttpServer();
+        server.startHttpServer();
 
         // Items
         druidSpellBook = new DruidSpellBook(this);
@@ -65,8 +67,7 @@ public class McDruid extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        HttpServer httpServer = new HttpServer();
-        httpServer.stopHttpServer();
+        server.stopHttpServer();
     }
 
     public static McDruid getInstance() {
