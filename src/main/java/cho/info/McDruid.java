@@ -9,7 +9,9 @@ import cho.info.items.staff.IronNatureStaff;
 import cho.info.items.staff.StarForgedNatureStaff;
 import cho.info.items.staff.WoodenNatureStaff;
 import cho.info.ui.ManaBar;
+import cho.info.ui.SpellBookUi;
 import cho.info.utli.HttpServer;
+import cho.info.utli.PlayerData;
 import org.bukkit.Material;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,6 +25,7 @@ public class McDruid extends JavaPlugin {
 
     private static McDruid instance;
     private static HttpServer server;
+    public static PlayerData playerData;
 
     public DruidSpellBook druidSpellBook;
     public WoodenNatureStaff woodenNatureStaff;
@@ -41,6 +44,7 @@ public class McDruid extends JavaPlugin {
 
         server = new HttpServer();
         server.startHttpServer();
+        playerData = new PlayerData(getDataFolder());
 
         // Items
         druidSpellBook = new DruidSpellBook(this);
@@ -58,6 +62,7 @@ public class McDruid extends JavaPlugin {
 
         PluginManager pluginManager = getServer().getPluginManager();
         pluginManager.registerEvents(new ClientCheck(this), this);
+        pluginManager.registerEvents(new SpellBookUi(), this);
 
 
         loadRecepies();
@@ -118,6 +123,18 @@ public class McDruid extends JavaPlugin {
                 .addIngredient(1, magicStar)
         );
 
+    }
+
+    public static PlayerData getPlayerData() {
+        return playerData;
+    }
+
+    public IronNatureStaff getIronNatureStaff() {
+        return ironNatureStaff;
+    }
+
+    public StarForgedNatureStaff getStarForgedNatureStaff() {
+        return starForgedNatureStaff;
     }
 
 }

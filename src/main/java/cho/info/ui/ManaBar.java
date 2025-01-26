@@ -18,3 +18,4 @@ public class ManaBar extends GenericWidget {
         return WidgetType.InGameScreen;
     }
 }
+// not complete

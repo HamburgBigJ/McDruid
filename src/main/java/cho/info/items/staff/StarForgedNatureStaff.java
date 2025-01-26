@@ -1,6 +1,9 @@
 package cho.info.items.staff;
 
+import cho.info.McDruid;
+import cho.info.spells.CastSpell;
 import cho.info.utli.CustomTexture;
+import cho.info.utli.PlayerData;
 import org.bukkit.block.BlockFace;
 import org.bukkit.plugin.Plugin;
 import org.getspout.spoutapi.block.SpoutBlock;
@@ -20,7 +23,9 @@ public class StarForgedNatureStaff extends GenericCustomItem {
 
         if (!player.isSpoutCraftEnabled()) return false;
 
-        player.sendMessage("You clicked with the star forged staff!");
+        PlayerData playerData = McDruid.getPlayerData();
+        CastSpell castSpell = new CastSpell();
+        castSpell.castSpell( (String) playerData.getPlayerValue(player, "spell"),player);
 
         return true;
     }
