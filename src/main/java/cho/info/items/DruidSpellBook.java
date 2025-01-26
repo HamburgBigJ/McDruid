@@ -37,13 +37,13 @@ public class DruidSpellBook extends GenericCustomItem {
         ItemMeta thorenMeta = thorne.getItemMeta();
         thorenMeta.setDisplayName("§3Thorne spell - Click to select");
         thorne.setItemMeta(thorenMeta);
-        inventory.addItem(thorne);
+        inventory.setItem(0, thorne);
 
         ItemStack sword = new ItemStack(Material.ARROW);
         ItemMeta swordMeta = sword.getItemMeta();
         swordMeta.setDisplayName("§4Fire Thorne spell - Click to select");
         sword.setItemMeta(swordMeta);
-        inventory.addItem(sword);
+        inventory.setItem(1, sword);
 
         return inventory;
     }
